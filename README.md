@@ -11,11 +11,13 @@ A set of scripts to convert textures intended for use with PCSX2-Rexis' texture 
 
 # Glossory because I'm bad at naming things 
 One Seven = main line PCSX2 
+
 Raw Dump = texture that's been dumped and not been modified 
+
 Multi Hash = file names that contain both Rexis and mainline hashes separated by an under score 
   
 
-#What each script does 
+# What each script does 
 Create_multi_hash_dumped_tex: 
 Copys dumped mainline PCSX2 textures to a new directory and add Rexis hashes to the start of the file name 
   
