@@ -13,7 +13,7 @@ renamedOutput = sys.argv[3]
 
 missingTex = "missing\\"
 
-print(modernHashPath)
+
 for root, _, files in os.walk(modernHashPath):
     for file in files:
         OneSevenTexInRexisPath = os.path.join(RexisHashPath, file.split("_")[0] + ".png")
