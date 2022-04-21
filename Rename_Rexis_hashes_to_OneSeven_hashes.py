@@ -2,7 +2,7 @@ import os
 import sys
 import shutil
 
-if not (len(sys.argv) > 4):
+if not (len(sys.argv) > 3):
     print("Usage: renxxh.py <multi hash textures dir> <Rexis replacement textures dir> <output dir>")
     sys.exit(0)
 
