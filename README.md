@@ -8,6 +8,24 @@ A set of scripts to convert textures intended for use with PCSX2-Rexis' texture 
 4) Copy your PCSX2-Rexis replacement textures to "Rexis Replacement Textures" 
 5) run convert.bat and make some tea (it takes a while) 
   
+# What's each directory for?
+Missing:   
+Contains all that were in the mainline dump that couldn’t be found in the Rexis replacement textures 
+
+Multi Hash Raw Texture Dumps:   
+This will be automatically filled with textures that will have both Rexis and mainline hashes 
+
+Need to dump: 
+Contains textures that were found in Rexis replacement textures but couldn't be converted because it couldn’t find the mainline hash for the texture. So basically you need to go try and find  as many of the texture from this folder in game and dump it using mainline then copy your updated mainline dump to “OneSeven Raw Texture Dumps” 
+
+OneSeven Raw Texture Dumps:   
+You will need to fill this directory with your dumped textures from mainline PCSX2 
+
+OneSeven Replacement Textures:   
+This will be filled with all the converted textures for mainline PCSX2. You’ll want to move these to your replacements folder in PCSX2 once the scripts are done 
+
+Rexis Replacement Textures:   
+Here you will need to put all the replacement textures you want to convert from Rexis, these will typically be HD 
 
 # Glossory because I'm bad at naming things 
 One Seven = main line PCSX2 
