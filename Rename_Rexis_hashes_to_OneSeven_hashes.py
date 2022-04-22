@@ -13,6 +13,10 @@ renamedOutput = sys.argv[3]
 
 missingTex = "No file to convert\\"
 
+doubleCheck = True
+if sys.argv > 4:
+    if sys.argv[4] == "--noDoubleCheck":
+        doubleCheck = False
 
 for root, _, files in os.walk(modernHashPath):
     for file in files:
@@ -20,8 +24,9 @@ for root, _, files in os.walk(modernHashPath):
         if os.path.exists(OneSevenTexInRexisPath):
             shutil.copy(OneSevenTexInRexisPath, os.path.join(renamedOutput, file.split("_")[1]))
         else:
+            #Double Check for file names that wern't found becase they have either a prefix or a suffix
             foundEqu = False
-            if sys.argv[4] == "--doubleCheck":
+            if  doubleCheck:
                 for RexisRoot, _Rexis, RexisFiles in os.walk(RexisHashPath):
                     for RexisFile in RexisFiles:
                         if file.split("_")[0] in RexisFile:
