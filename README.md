@@ -5,26 +5,26 @@ A set of scripts to convert textures intended for use with PCSX2-Rexis' texture 
 1) dump as many textures in mainline PCSX2 as you can 
 2) Run the Make directorys.bat this will create the directories used by convert.bat 
 3) Copy the textures you dumped from PCSX2 to "OneSeven Raw Texture Dumps" 
-4) Copy your PCSX2-Rexis replacement textures to "Rexis Replacement Textures" 
+4) Copy your PCSX2-Rexis Upscaled Textures to "Rexis Upscaled Textures" 
 5) run convert.bat and make some tea (it takes a while) 
   
 # What's each directory for?
-Missing:   
-Contains all that were in the mainline dump that couldn’t be found in the Rexis replacement textures 
+No file to convert:   
+Contains all textures that were in the mainline dump that couldn’t be found in the Rexis Upscaled Textures and there for not converted
 
-Multi Hash Raw Texture Dumps:   
+Hash Look Up:   
 This will be automatically filled with textures that will have both Rexis and mainline hashes 
 
 Need to dump: 
-Contains textures that were found in Rexis replacement textures but couldn't be converted because it couldn’t find the mainline hash for the texture. So basically you need to go try and find  as many of the texture from this folder in game and dump it using mainline then copy your updated mainline dump to “OneSeven Raw Texture Dumps” 
+Contains textures that were found in Rexis Upscaled Textures but couldn't be converted because it couldn’t find the mainline hash for the texture. So basically you need to go try and find  as many of the texture from this folder in game and dump it using mainline then copy your updated mainline dump to “OneSeven Raw Texture Dumps” 
 
 OneSeven Raw Texture Dumps:   
 You will need to fill this directory with your dumped textures from mainline PCSX2 
 
-OneSeven Replacement Textures:   
+Upscaled Mainline Textures (Output):   
 This will be filled with all the converted textures for mainline PCSX2. You’ll want to move these to your replacements folder in PCSX2 once the scripts are done 
 
-Rexis Replacement Textures:   
+Rexis Upscaled Textures:   
 Here you will need to put all the replacement textures you want to convert from Rexis, these will typically be HD 
 
 # Glossory because I'm bad at naming things 
@@ -36,7 +36,7 @@ Multi Hash = file names that contain both Rexis and mainline hashes separated by
   
 
 # What each script does 
-Create_multi_hash_dumped_tex: 
+Creat_hash_lookup: 
 Copys dumped mainline PCSX2 textures to a new directory and add Rexis hashes to the start of the file name 
   
 
@@ -49,4 +49,4 @@ This is just a slightly modified script form the PCSX2 repo. It's used to half t
   
 
 # Todo 
-replace Multi Hash Raw Texture Dumps with a txt file because using a directory instead as a look up table is ridiculous 
+replace Hash Look Up directory with a txt file because using a directory instead as a look up table is ridiculous 

@@ -1,6 +1,6 @@
-mkdir missing
+mkdir "No file to convert"
 mkdir "Need to dump"
-mkdir "Multi Hash Raw Texture Dumps"
+mkdir "Hash Look Up"
 mkdir "OneSeven Raw Texture Dumps"
-mkdir "OneSeven Replacement Textures"
-mkdir "Rexis Replacement Textures"
+mkdir "Upscaled Mainline Textures (Output)"
+mkdir "Rexis Upscaled Textures"

@@ -3,7 +3,7 @@ import sys
 import shutil
 
 if not (len(sys.argv) > 3):
-    print("Usage: renxxh.py <multi hash textures dir> <Rexis replacement textures dir> <output dir>")
+    print("Usage: renxxh.py <multi hash textures dir> <Rexis Upscaled Textures dir> <output dir>")
     sys.exit(0)
 
 modernHashPath = sys.argv[1]
@@ -11,7 +11,7 @@ RexisHashPath = sys.argv[2]
 
 renamedOutput = sys.argv[3]
 
-missingTex = "missing\\"
+missingTex = "No file to convert\\"
 
 
 for root, _, files in os.walk(modernHashPath):

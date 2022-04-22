@@ -3,7 +3,7 @@ import sys
 import shutil
 
 if not (len(sys.argv) > 3):
-    print("Usage: renxxh.py <multi hash textures dir> <Rexis replacement textures dir> <output dir>")
+    print("Usage: renxxh.py <multi hash textures dir> <Rexis Upscaled Textures dir> <output dir>")
     sys.exit(0)
 
 multiHashPath = sys.argv[1]
