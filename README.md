@@ -9,12 +9,6 @@ A set of scripts to convert textures intended for use with PCSX2-Rexis' texture 
 5) run convert.bat and make some tea (it takes a while) 
   
 # What's each directory for?
-No file to convert:   
-Contains all textures that were in the mainline dump that couldn’t be found in the Rexis Upscaled Textures and there for not converted
-
-Hash Look Up:   
-This will be automatically filled with textures that will have both Rexis and mainline hashes 
-
 Need to dump: 
 Contains textures that were found in Rexis Upscaled Textures but couldn't be converted because it couldn’t find the mainline hash for the texture. So basically you need to go try and find  as many of the texture from this folder in game and dump it using mainline then copy your updated mainline dump to “OneSeven Raw Texture Dumps” 
 
@@ -49,4 +43,4 @@ This is just a slightly modified script form the PCSX2 repo. It's used to half t
   
 
 # Todo 
-replace Hash Look Up directory with a txt file because using a directory instead as a look up table is ridiculous 
+Add support for prefixs and suffixes

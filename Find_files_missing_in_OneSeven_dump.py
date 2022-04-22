@@ -3,10 +3,14 @@ import sys
 import shutil
 
 if not (len(sys.argv) > 3):
-    print("Usage: renxxh.py <multi hash textures dir> <Rexis Upscaled Textures dir> <output dir>")
+    print("Usage: renxxh.py <look up table> <Rexis Upscaled Textures dir> <output dir>")
     sys.exit(0)
 
-multiHashPath = sys.argv[1]
+lookUpFile = open(sys.argv[1], "r")
+lookUpTable = lookUpFile.read().split("\n")
+lookUpFile.close()
+if lookUpTable[-1] == "":
+    lookUpTable.pop(-1)
 RexisReplcementTexPath = sys.argv[2]
 
 missingDumps = sys.argv[3]
@@ -28,8 +32,8 @@ for root, _, files in os.walk(RexisReplcementTexPath):
             hashFileName = hashFileName.split(".")[0]
 
         foundTexInDump = False
-        for multiHashFile in os.listdir(multiHashPath):
-            if hashFileName in multiHashFile:
+        for hashes in lookUpTable:
+            if hashFileName in hashes.split(", ")[0]:
                 foundTexInDump = True
                 break
         if not foundTexInDump:
