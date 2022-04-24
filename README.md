@@ -44,3 +44,4 @@ This is just a slightly modified script form the PCSX2 repo. It's used to half t
 
 # Todo 
 Add support for prefixs and suffixes
+Add premade hash look up files

@@ -18,6 +18,11 @@ renamedOutput = sys.argv[3]
 ##I'm not sure if I should remove this all together just yet
 #missingTex = "No file to convert\\"
 
+#Empty PNGs from output folder
+for file in os.listdir(renamedOutput):
+    if file.split(".")[1].lower() == "png":
+        os.remove(os.path.join(renamedOutput, file))
+
 doubleCheck = True
 showTexturesNotInRexis = False
 for arg in sys.argv:
