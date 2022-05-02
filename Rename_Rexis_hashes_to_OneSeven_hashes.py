@@ -41,10 +41,19 @@ for hashLookUp in lookUpTable:
         if  doubleCheck:
             for RexisRoot, _Rexis, RexisFiles in os.walk(RexisHashPath):
                 for RexisFile in RexisFiles:
-                    if hashLookUp.split(", ")[0] in RexisFile:
+                    hashFileName = RexisFile
+                    hashPrefix = ""
+                    if "-" in hashFileName:
+                        hashFileName = hashFileName.split("-")[0]
+                    if "_" in hashFileName:
+                        hashPrefix, hashFileName = hashFileName.split("_")
+                        hashPrefix = hashPrefix + "."
+                    if ".png" in hashFileName:
+                        hashFileName = hashFileName.split(".")[0]
+                    if hashLookUp.split(", ")[0] == hashFileName:
                         print("Found", RexisFile, "during double check")
                         foundEqu = True
-                        shutil.copy(os.path.join(RexisRoot, RexisFile), os.path.join(renamedOutput, hashLookUp.split(", ")[1]))
+                        shutil.copy(os.path.join(RexisRoot, RexisFile), os.path.join(renamedOutput, hashLookUp.split(", ")[1].split(".")[0] + ".{}png".format(hashPrefix)))
         if (not foundEqu) and showTexturesNotInRexis:
             ##I'm not sure if I should remove this all together just yet
             #shutil.copy(os.path.join(root, file), missingTex)
