@@ -6,7 +6,7 @@ import shutil
 from PIL import Image
 
 if len(sys.argv) != 3:
-    print("Usage: renxxh.py <input dir> <output look up table>")
+    print("Usage: {} <input dir> <output look up table>".format(sys.argv[0]))
     sys.exit(0)
 
 lookUpTable = []

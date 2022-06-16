@@ -3,7 +3,7 @@ import sys
 import shutil
 
 if not (len(sys.argv) > 3):
-    print("Usage: renxxh.py <look up table> <Rexis Upscaled Textures dir> <output dir>")
+    print("Usage: {} <look up table> <Rexis Upscaled Textures dir> <output dir>".format(sys.argv[0]))
     sys.exit(0)
 
 lookUpFile = open(sys.argv[1], "r")
